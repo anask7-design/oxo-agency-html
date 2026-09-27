@@ -48,3 +48,10 @@
     document.addEventListener('mouseleave', () => document.body.classList.remove('pointer-active'));
   }
 })();
+
+// GitHub Pages sert les pages statiques ; les formulaires sont traités par le serveur OXO.
+if (location.hostname.endsWith('.github.io')) {
+  document.querySelectorAll('form[action="devis.php"], form[action="contact.php"]').forEach(form => {
+    form.action = 'https://web.oxo-agency.com/' + form.getAttribute('action');
+  });
+}
