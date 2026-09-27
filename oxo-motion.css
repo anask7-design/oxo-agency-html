@@ -21,7 +21,7 @@ body.pointer-active .oxo-pointer{opacity:1}
 @media(prefers-reduced-motion:reduce){.hero::before{animation:none}.oxo-reveal{opacity:1;transform:none;filter:none;transition:none}.oxo-pointer{display:none}.home-hero-panel,.home-service,.home-proof,.step,.blog-card{transition:none}}
 
 /* Bebas Neue supplied by Anas: display type for headlines and key labels. */
-@font-face{font-family:"Bebas Neue";src:url("fonts/BebasNeue-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Bebas Neue";src:url("BebasNeue-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
 h1,h2,h3,h4,h5,h6,.price{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.015em}
 .hero h1{line-height:.96;letter-spacing:.005em}
 .section-head h2,.cta h2,.home-contact h2{line-height:1.04}
