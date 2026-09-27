@@ -55,3 +55,15 @@ if (location.hostname.endsWith('.github.io')) {
     form.action = 'https://web.oxo-agency.com/' + form.getAttribute('action');
   });
 }
+
+// Sur GitHub Pages, les mêmes pages sont disponibles avec des adresses sans extension.
+if (location.hostname.endsWith('.github.io')) {
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === 'index.html') {
+      link.setAttribute('href', '/oxo-agency-html/');
+    } else if (/^(?:site-|blog-)[a-z0-9-]+\.html(?:[?#]|$)/.test(href)) {
+      link.setAttribute('href', href.replace('.html', ''));
+    }
+  });
+}
